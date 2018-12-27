@@ -68,4 +68,40 @@ function upload(id,pId,type,fileType,fn){
     })
 }
 
+
+
+
+// 预览
+
+
+            previewImage(){
+                let files = document.getElementById('uploadZJ').files
+                for (let i = 0;i<files.length;i++){
+                    this.fileList.push(files[i]);
+                    console.log(this.fileList)
+                    let reader = new FileReader();
+                    //读取文件过程方法
+                    reader.onloadstart = (e) => {
+                        console.log("开始读取....");
+                    }
+                    reader.onprogress = (e) => {
+                        console.log("正在读取中....");
+                    }
+                    reader.onabort = (e) => {
+                        console.log("中断读取....");
+                    }
+                    reader.onerror = (e) => {
+                        console.log("读取异常....");
+                    }
+                    reader.onload = (e) => {
+                        console.log("成功读取....");
+                            let src = e.target.result;
+                            this.fileListP.push(src)
+                    }
+
+                    reader.readAsDataURL(files[i])
+                }
+            },
+
+
 ```
