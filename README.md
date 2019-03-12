@@ -1,5 +1,5 @@
 # jquery-upload-file
-jquery文件上传插件
+原声js文件上传插件
 
 
 ## How to use
