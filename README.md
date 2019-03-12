@@ -15,7 +15,7 @@ function upload(id,pId,type,fileType,fn){
     uploadFile({
         id: '#'+id,  // 上传按钮id
         type: fileType,  // 上传文件的后缀名
-        maxSzie: 20 * 1024,       // 文件最大大小，单位KB
+        maxSize: 20 * 1024,       // 文件最大大小，单位KB
         progressCtn: '#' + pId,  // 显示进度条的容器id，样式自己写
         url: attachmentDomain + '/minstone/attachment/uploadFileList',
         nameMaxLen:80,    //名字最长字符数
